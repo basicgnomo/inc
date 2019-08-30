@@ -7,7 +7,8 @@ function inc($includesMix){
     }
     foreach ($listaDeIncludesArr as $includeStr) {
         $includeStr=mb_strtolower($includeStr);//tudo em letra minúscula
-        $filename=ROOT.'basic/basicgnomo/'.$includeStr.'/'.$includeStr.'$
+        $filename=ROOT.'basic/basicgnomo/'.$includeStr.'/';
+        $filename.=$includeStr.'.php';
         if(file_exists($filename)){
             require_once($filename);
         }else{
